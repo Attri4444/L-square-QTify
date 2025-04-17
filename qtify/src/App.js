@@ -1,11 +1,12 @@
 import Navbar from "./component/Navbar/Navbar"
 import Hero from './component/Hero/Hero';
-import Section from './component/Section/Section';
+import Section from "./component/Section/Section";
 import FilterSection from './component/FilterSection/FilterSection';
 import {fetchTopAlbums, fetchNewAlbums, fetchSongs} from './api/api'
 import { useEffect, useState } from 'react';
 import styles from "./App.module.css"
 import Search from "./component/Search/Search";
+// import Search from "./component/search/search";
 import Faqs from "./component/Faqs/Faqs";
 import Footer from "./component/Footer/Footer";
 function App() {
@@ -34,7 +35,7 @@ function App() {
   const generateNewAlbumSongs=async()=>{
     try{
       const res= await fetchNewAlbums();  
-    setNewAlbumSongs(res);
+    setNewAlbumSongs(res); 
     }
     catch(error){
       console.log(error);
